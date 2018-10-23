@@ -1,0 +1,3 @@
+dlfcn;none;no-all-load,no-build,no-delete,no-dependency,no-fs,no-import,no-load-all,no-os-mingw,no-public,no-update;a1bde62d-783b-406e-bb45-395e74bdafad;dlfcn;;;;aliases=dl,dlfcn
+src/plugin1;local;no-cmakeinherit,no-delete,no-link,no-share,no-update;2edfffbb-f003-4c2d-b190-7727bb937781;;;;;
+src/plugin2;local;no-cmakeinherit,no-delete,no-link,no-share,no-update;c3398edc-0ce1-48ce-b2de-bdbd982efe16;;;;;

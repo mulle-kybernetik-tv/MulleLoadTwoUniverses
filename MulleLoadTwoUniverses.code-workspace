@@ -1,0 +1,29 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "**/.*": true,
+      "**/addiction": true,
+      "**/build": true,
+      "**/dependency": true,
+      "**/stash": true,
+      "**/cmake/share": true,
+      "**/_*.cmake": true,
+      "**/*.code-workspace": true,
+      "**/_MulleLoadTwoUniverses*.h": true,
+      "**/MulleObjCLoader+*MulleLoadTwoUniverses*.h": true,
+      "**/objc-loader.h": true,
+      "**/src/plugin1/_plugin1*.h": true,
+      "**/src/plugin1/MulleObjCLoader+plugin1.[hm]": true,
+      "**/src/plugin2/_plugin2*.h": true,
+      "**/src/plugin2/MulleObjCLoader+plugin2.[hm]": true
+   },
+   "files.associations": {
+      "stdlib.h": "c"
+   }
+}
+}

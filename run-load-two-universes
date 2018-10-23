@@ -1,0 +1,46 @@
+#! /usr/bin/env bash
+
+
+r_concat()
+{
+   local separator="${3:- }"
+
+   if [ -z "${1}" ]
+   then
+      RVAL="${2}"
+   else
+      if [ -z "${2}" ]
+      then
+         RVAL="${1}"
+      else
+         RVAL="${1}${separator}${2}"
+      fi
+   fi
+}
+
+
+for bind1 in '' RTLD_DEEPBIND
+do
+	for bind2 in '' RTLD_DEEPBIND
+	do
+	   for scope1 in RTLD_LOCAL RTLD_GLOBAL
+		do
+		   for scope2 in RTLD_LOCAL RTLD_GLOBAL
+			do
+				r_concat "${scope1}" "${bind1}" '+'
+				flags1="${RVAL}"
+				r_concat "${scope2}" "${bind2}" '+'
+				flags2="${RVAL}"
+
+				echo "--------------------------------"
+				echo "${flags1} | ${flags2}"
+				echo "--------------------------------"
+
+				./build/Debug/MulleLoadTwoUniverses \
+					./dependency/lib/libplugin1.so ${flags1} \
+					./dependency/lib/libplugin2.so ${flags2}			
+				echo				
+			done
+		done
+	done
+done
